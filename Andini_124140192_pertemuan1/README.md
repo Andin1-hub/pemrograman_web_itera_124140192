@@ -61,9 +61,9 @@ Andini_124140192_pertemuan1/
 
 | Tampilan                  | Gambar                  |
 | ------------------------- | ----------------------- |
-| Form input utama          | `screenshots/form.png`  |
-| Validasi error muncul     | `screenshots/error.png` |
-| Hasil perhitungan & tabel | `screenshots/hasil.png` |
+| Form input utama          | ![Image Alt](https://github.com/Andin1-hub/pemrograman_web_itera_124140192/blob/e2e5f5f98925f5845c7630f450afcf9f66d2fedb/Andini_124140192_pertemuan1/screenshot/form.png)  |
+| Validasi error muncul     | ![Image Alt](https://github.com/Andin1-hub/pemrograman_web_itera_124140192/blob/e2e5f5f98925f5845c7630f450afcf9f66d2fedb/Andini_124140192_pertemuan1/screenshot/eror.png) |
+| Hasil perhitungan & tabel | ![Image Alt](https://github.com/Andin1-hub/pemrograman_web_itera_124140192/blob/e2e5f5f98925f5845c7630f450afcf9f66d2fedb/Andini_124140192_pertemuan1/screenshot/diskon.png) |
 
 ## Penjelasan Teknis Singkat
 
