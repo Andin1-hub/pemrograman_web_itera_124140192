@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir Kantin Kampus - Mini POS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <h1 class="topbar__title">🛒 Kasir Kantin Kampus</h1>
+      <p class="topbar__subtitle">Mini POS &middot; Keranjang Belanja Sederhana</p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Form input barang -->
+    <section class="card card--form" aria-labelledby="judul-form">
+      <h2 id="judul-form" class="card__title">Tambah Barang</h2>
+
+      <form id="form-barang" novalidate>
+        <div class="field">
+          <label for="input-nama">Nama Barang</label>
+          <input type="text" id="input-nama" placeholder="Contoh: Buku Tulis" autocomplete="off">
+          <p class="field__error" id="error-nama" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="input-harga">Harga Satuan (Rp)</label>
+          <input type="number" id="input-harga" placeholder="Minimal 500" step="any">
+          <p class="field__error" id="error-harga" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="input-qty">Jumlah / Qty</label>
+          <input type="number" id="input-qty" placeholder="Minimal 1" step="any">
+          <p class="field__error" id="error-qty" role="alert"></p>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block">+ Tambahkan ke Keranjang</button>
+      </form>
+    </section>
+
+    <!-- Tabel keranjang -->
+    <section class="card card--table" aria-labelledby="judul-keranjang">
+      <div class="card__head">
+        <h2 id="judul-keranjang" class="card__title">Daftar Belanja</h2>
+        <span class="badge" id="badge-jumlah">0 item</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Barang</th>
+              <th class="num">Harga Satuan</th>
+              <th class="num">Qty</th>
+              <th class="num">Subtotal</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="isi-keranjang"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Ringkasan pembayaran -->
+    <aside class="card card--summary" aria-labelledby="judul-ringkasan">
+      <h2 id="judul-ringkasan" class="card__title">Ringkasan Pembayaran</h2>
+
+      <dl class="summary">
+        <div class="summary__row">
+          <dt>Total Belanja</dt>
+          <dd id="teks-total">Rp 0</dd>
+        </div>
+        <div class="summary__row">
+          <dt>Diskon <small id="keterangan-diskon">(min. belanja Rp 50.000)</small></dt>
+          <dd id="teks-diskon" class="minus">- Rp 0</dd>
+        </div>
+        <div class="summary__row summary__row--grand">
+          <dt>Total Akhir</dt>
+          <dd id="teks-total-akhir">Rp 0</dd>
+        </div>
+      </dl>
+
+      <div class="field">
+        <label for="input-bayar">Uang Bayar (Rp)</label>
+        <input type="number" id="input-bayar" placeholder="Masukkan uang diterima" step="any">
+      </div>
+
+      <div class="kembalian" id="kotak-kembalian">
+        <span class="kembalian__label">Kembalian</span>
+        <strong class="kembalian__nilai" id="teks-kembalian">Rp 0</strong>
+        <p class="kembalian__info" id="info-kembalian"></p>
+      </div>
+
+      <button type="button" class="btn btn--danger btn--block" id="tombol-reset">Transaksi Baru / Reset</button>
+    </aside>
+  </main>
+
+  <footer class="footer">Mini POS &copy; Pemrograman Web</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
